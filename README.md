@@ -150,7 +150,13 @@ Pet Table
  
 > Use a LEFT JOIN to join the Orders table onto the Customers table and check for a NULL value in the OrderID column
 
-
+DELETE
+FROM customers
+WHERE customerid IN 
+	(SELECT c.customerid
+	FROM customers c LEFT JOIN orders o
+	ON o.customerid = c.customerid
+	WHERE orderid IS NULL)
 
 ## Create Database and Table
 
