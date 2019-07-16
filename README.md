@@ -173,3 +173,10 @@ WHERE customerid IN
   - the `id` should be the primary key for the table.
   - account `name` should be unique.
   - account `budget` is required.
+
+# Create Database Stretch Work
+CREATE DATABASE "Budget"
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
